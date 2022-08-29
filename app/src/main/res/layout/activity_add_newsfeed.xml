@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Creator.AddNewsfeedActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <EditText
+        android:id="@+id/newsfeed_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="What's in your mind?"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:gravity="start"
+        android:inputType="textCapSentences"
+        android:background="@drawable/et_bg4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/add_newsfeed_img"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <ImageView
+        android:id="@+id/add_newsfeed_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_outline_image_24"
+        android:layout_margin="10dp"
+        app:tint="@color/golden"
+        app:layout_constraintTop_toTopOf="@id/newsfeed_et"
+        app:layout_constraintBottom_toBottomOf="@id/newsfeed_et"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/newsfeed_selected_img"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/cover_img"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newsfeed_et"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/post_newsfeed_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Post"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:background="@drawable/btn_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newsfeed_selected_img"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

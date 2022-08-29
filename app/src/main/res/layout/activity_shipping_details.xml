@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Supporter.ShippingDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <EditText
+        android:id="@+id/shipping_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:background="@drawable/et_bg2"
+        android:padding="20dp"
+        android:inputType="textCapWords"
+        android:layout_margin="25dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <EditText
+        android:id="@+id/shipping_phone_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:background="@drawable/et_bg2"
+        android:padding="20dp"
+        android:inputType="phone"
+        android:layout_margin="25dp"
+        app:layout_constraintTop_toBottomOf="@id/shipping_name_et" />
+
+    <EditText
+        android:id="@+id/shipping_full_address_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Address"
+        android:inputType="textCapWords"
+        android:background="@drawable/et_bg2"
+        android:padding="20dp"
+        android:layout_margin="25dp"
+        app:layout_constraintTop_toBottomOf="@id/shipping_phone_et" />
+
+    <Button
+        android:id="@+id/add_shipping_details_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Shipping Details"
+        android:layout_margin="25dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:background="@drawable/btn_bg"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shipping_full_address_et"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

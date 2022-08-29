@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_bg2"
+    tools:context=".Creator.CreatorFragment.CreatorHomeFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/shop_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/shop_img"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/shop_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop Name"
+        android:textSize="16sp"
+        app:fontFamily="@font/inter_bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/shop_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/total_revenue_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Revenue"
+        android:textSize="12sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shop_name_text"/>
+
+    <TextView
+        android:id="@+id/total_revenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$ 1,950"
+        android:textSize="20sp"
+        app:fontFamily="@font/inter_bold"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_revenue_text"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stats_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/transparent_bg"
+        app:layout_constraintTop_toBottomOf="@id/total_revenue">
+
+        <TextView
+            android:id="@+id/sold_out_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="851"
+            android:textSize="16sp"
+            app:fontFamily="@font/inter_bold"
+            android:textColor="@color/darkTextColor2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/sold_out_tv"
+            app:layout_constraintEnd_toEndOf="@id/sold_out_tv"/>
+
+        <TextView
+            android:id="@+id/sold_out_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sold Out"
+            android:textSize="12sp"
+            android:textColor="@color/darkTextColor2"
+            app:layout_constraintTop_toBottomOf="@id/sold_out_text"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/stock_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="519"
+            android:textSize="16sp"
+            app:fontFamily="@font/inter_bold"
+            android:textColor="@color/darkTextColor2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sold_out_text"
+            app:layout_constraintEnd_toStartOf="@id/following_text"/>
+
+        <TextView
+            android:id="@+id/stock_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock"
+            android:textSize="12sp"
+            android:textColor="@color/darkTextColor2"
+            app:layout_constraintTop_toBottomOf="@id/stock_text"
+            app:layout_constraintStart_toStartOf="@id/stock_text"
+            app:layout_constraintEnd_toEndOf="@id/stock_text"/>
+
+
+        <TextView
+            android:id="@+id/following_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5k"
+            android:textSize="16sp"
+            app:fontFamily="@font/inter_bold"
+            android:textColor="@color/darkTextColor2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/following_tv"
+            app:layout_constraintStart_toStartOf="@id/following_tv"/>
+
+        <TextView
+            android:id="@+id/following_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Following"
+            android:textSize="12sp"
+            android:textColor="@color/darkTextColor2"
+            app:layout_constraintTop_toBottomOf="@id/following_text"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/creator_menu_bg"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/stats_cl"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/creator_menu_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

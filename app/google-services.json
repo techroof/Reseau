@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "296762169840",
+    "project_id": "reseau-12cdf",
+    "storage_bucket": "reseau-12cdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296762169840:android:798e1e3a242ecbbb756535",
+        "android_client_info": {
+          "package_name": "com.techroof.reseau"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296762169840-as987vbv8bn6ep5c72h4ovem4tvq5kdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-EXUFP4k7u24Z96Kp6VZkMON4Cui08QE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296762169840-as987vbv8bn6ep5c72h4ovem4tvq5kdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
